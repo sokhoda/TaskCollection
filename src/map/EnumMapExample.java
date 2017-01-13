@@ -15,7 +15,7 @@ public class EnumMapExample {
 
 		// Java EnumMap Example 1: creating EnumMap in java with key as enum
 		// type STATE
-		EnumMap<STATE, String> map = new EnumMap<STATE, String>(STATE.class);
+		EnumMap<STATE, String> map = new EnumMap<>(STATE.class);
 
 		System.out.println(map);
 
@@ -39,8 +39,8 @@ public class EnumMapExample {
 
 		// Java EnumMap Example 5:
 		// retrieving value from EnumMap in java
-		System.out.println("EnumMap key : " + STATE.NEW + " value: "
-				+ map.get(STATE.NEW));
+		System.out.println(
+				"EnumMap key : " + STATE.NEW + " value: " + map.get(STATE.NEW));
 
 		System.out.println("entrySet-------");
 		Set<Map.Entry<STATE, String>> eSet = map.entrySet();

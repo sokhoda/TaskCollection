@@ -1,5 +1,7 @@
 package map;
 
+import java.util.Comparator;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
@@ -29,5 +31,12 @@ public class DemoTreeMap {
 		System.out.println(map.navigableKeySet().descendingSet());
 		System.err.println(map.values());
 
+		Map<String, DemoTreeMap> testMap = new TreeMap<>(
+				new Comparator<String>() {
+					@Override
+					public int compare(String o1, String o2) {
+						return o1.length() - o2.length();
+					}
+				});
 	}
 }
